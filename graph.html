@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title> CoVID Graph </title>
+<!-- <link href="https://rawgithub.com/nternetinspired/debug-css/master/debug.css" media="all" rel="stylesheet" type="text/css" /> -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="css/graph.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href=" https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+
+
+
+  </style>
+  </head>
+  <body >
+    <div  style="height:100vh; width:100%; background-color:white;">
+      <div id="sidebar" class="sidebar" style="z-index: 2; height:100vh; width:auto;  position:fixed; right:0px;">
+        <div style="">
+        <div id="sidebar-btn" style="border-radius: 5px 0px 0px 5px;position: relative; top: 50px; left: -50px; width:50px; height:50px; background-color:#039BE5; text-align: center;" class="align-middle" >
+            <i class="fa fa-times-circle" style="font-size:40px; margin-top:5px; color:white;" aria-hidden="true"></i>
+        </div>
+        <div style="position:relative;margin-top:-40px;margin-bottom:20px;" class="wrap-drop" id="noble-gases">
+          <span>Deaths due to CoVID19</span>
+          <ul class="drop">
+            <li class="selected"><a>Deaths due to CoVID19 </a></li>
+            <li><a>Recovered from CoVID19</a></li>
+            <li><a>Infected from CoVID19</a></li>
+            <li><a>Daily new Infections</a></li>
+          </ul>
+        </div>
+        <div style="position:relative; margin-bottom:30px;" class="wrap-drop" id="graph-type">
+          <span>Line Graph</span>
+          <ul class="drop">
+            <li class="selected"><a>Line Graph</a></li>
+            <li><a>Bar Graph</a></li>
+            <li><a>Pie Chart</a></li>
+          </ul>
+        </div>
+
+
+
+
+        <div style="position: relative; margin-bottom:0px;margin-left: 25px;font-family: 'Roboto Condensed', sans-serif; color:#2E86C1;">
+          <div style="font-size:20px;margin-right: 35px;margin-bottom: 10px;" class="pretty p-default p-fill">
+               <input type="checkbox" />
+               <div style="width: 100px;" class="state p-info">
+                   <label>India</label>
+               </div>
+           </div>
+           <div style="font-size:20px;margin-bottom: 10px;" class="pretty p-default p-fill">
+                <input type="checkbox" />
+                <div style="width: 100px;" class="state p-info">
+                    <label>China</label>
+                </div>
+            </div><br>
+
+           <div style="font-size:20px;margin-right: 25px; margin-bottom: 10px;" class="pretty p-default p-fill">
+                <input type="checkbox" />
+                <div style="width: 100px;" class="state p-info">
+                    <label>South Korea</label>
+                </div>
+            </div>
+            <div style="font-size:20px;  margin-bottom: 10px; margin-left:10px;"  class="pretty p-default p-fill">
+                 <input type="checkbox" />
+                 <div style="width: 100px;" class="state p-info">
+                     <label>U.S.A</label>
+                 </div>
+             </div><br>
+             <div style="font-size:20px;margin-right: 35px;  margin-bottom: 10px;" class="pretty p-default p-fill">
+                  <input type="checkbox" />
+                  <div style="width: 100px;" class="state p-info">
+                      <label>Italy</label>
+                  </div>
+              </div>
+              <div style="font-size:20px;  margin-bottom: 10px;" class="pretty p-default p-fill">
+                   <input type="checkbox" />
+                   <div style="width: 100px;" class="state p-info">
+                       <label>Spain</label>
+                   </div>
+               </div><br>
+               <div style="font-size:20px;margin-right: 35px;margin-bottom: 10px;" class="pretty p-default p-fill">
+                    <input type="checkbox" />
+                    <div style="width: 100px;" class="state p-info">
+                        <label>U.K</label>
+                    </div>
+                </div>
+                <div style="font-size:20px;margin-bottom: 10px;" class="pretty p-default p-fill">
+                     <input type="checkbox" />
+                     <div style="width: 100px;" class="state p-info">
+                         <label>Iran</label>
+                     </div>
+                 </div><br>
+        </div>
+
+
+
+        <div style="font-family: 'Roboto Condensed', sans-serif; text-align:center; font-size: 20px; margin-top:20px;">
+          <div style="background-color:#0288D1; color:white; margin-left: 40px; margin-right: 40px; padding: 10px;">
+          <i class="fa fa-line-chart" aria-hidden="true"></i> Draw graph
+          </div>
+        </div>
+      </div>
+      </div>
+      <div id="graph" style="">
+        <canvas id="myChart" style=""></canvas>
+      </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/graph_data.js" type="text/javascript"></script>
+    <script src="js/graph_file.js" type="text/javascript"></script>
+    <script src="js/graph.js" type="text/javascript"></script>
+  </body>
+</html>
